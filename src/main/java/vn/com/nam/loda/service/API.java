@@ -17,6 +17,7 @@ public class API {
     }
 
     public static JsonNode vote(String token,String id) throws UnirestException {
+        System.out.println(id);
         return Unirest.post("https://v2.api.ereka.vn/content/posts/"+id+"/vote")
                 .header("content-type","application/json")
                 .header("authorization",token)
